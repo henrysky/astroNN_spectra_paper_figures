@@ -9,6 +9,7 @@ paper.
 Please notice the trained ``astroNN_0414_run001`` model is used for TESTING  propose only to ensure the code run correctly with reasonable result.
 
 To load the model, open python outside ``astroNN_0414_run001``
+
 .. code-block:: python
 
    from astroNN.models import load_folder
