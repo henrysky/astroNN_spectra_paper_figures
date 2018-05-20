@@ -5,16 +5,16 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for astroNN spectra analysis
 paper.
 
-``astroNN_0414_run001`` is a trained astroNN model to infer 24 stellar parameters and stellar intrinsic brightness from APOGEE spectra.
-Please notice the trained ``astroNN_0414_run001`` model is used for TESTING  propose only to ensure the code run correctly with reasonable result.
+``astroNN_0520_run001`` is a trained astroNN model to infer 24 stellar parameters and stellar intrinsic brightness from APOGEE spectra.
+Please notice the trained ``astroNN_0520_run001`` model is used for TESTING  propose only to ensure the code run correctly with reasonable result.
 
-To load the model, open python outside ``astroNN_0414_run001``
+To load the model, open python outside ``astroNN_0520_run001``
 
 .. code-block:: python
 
    from astroNN.models import load_folder
 
-   neuralnet = load_folder('astroNN_0414_run001')
+   neuralnet = load_folder('astroNN_0520_run001')
    # neuralnet is an astroNN neural network object, you can access keras API via neuralnet.keras_model
 
    # To get what the output neurones are representing
