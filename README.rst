@@ -19,8 +19,25 @@ https://github.com/henrysky/astroNN with extensive documentation at http://astro
 Getting Started
 =================
 
-This repository is to make sure all figures and results are reproducible by anyone easily for astroNN spectra analysis
-paper.
+This repository is to make sure all figures and results are reproducible by anyone easily for this paper.
+
+To get started, this paper use `astroNN`_ developed by the authors. Extensive documentation at http://astroNN.readthedocs.io
+and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
+
+.. _astroNN: https://github.com/henrysky/astroNN
+
+`Datasets_Data_Reduction.ipynb`_: You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
+
+`Inference_highSNR.ipynb`_: It describes the inference process and result on spectra within SNR 100-200.
+
+`Inference.ipynb`_: It describes the inference process and result on individual visit spectra which their combined counterpart SNR > 200.
+
+`Open_Globular_Cluster_Benchmark.ipynb`_: It describes the inference on Open/Globular Cluster.
+
+.. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
+.. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
+.. _Inference.ipynb: Inference.ipynb
+.. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
 
 ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN`_ class model to infer 22 stellar parameters and stellar
 intrinsic brightness from APOGEE spectra. Please notice the trained model is used for TESTING  propose only to ensure
@@ -40,19 +57,12 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0605
 
    from astroNN.models import load_folder
 
-   neuralnet = load_folder('astroNN_0520_run001')
-   # neuralnet is an astroNN neural network object, you can access keras API via neuralnet.keras_model
+   neuralnet = load_folder('astroNN_0605_run007')
+   # neuralnet is an astroNN neural network object, to learn more;
+   # http://astronn.readthedocs.io/en/latest/neuralnets/basic_usage.html
 
    # To get what the output neurones are representing
    print(neuralnet.targetname)
-
-`astroNN Github`_
-
-`astroNN Documentation`_
-
-.. _astroNN Github: https://github.com/henrysky/astroNN
-
-.. _astroNN Documentation: http://astronn.readthedocs.io/
 
 Some graphs require the package `mw_plot` from my `milkyway_plot Github`_
 
@@ -68,6 +78,9 @@ Authors
 
 -  | **Jo Bovy** - jobovy_
    | Professor, Department of Astronomy and Astrophysics, University of Toronto
+
+.. _henrysky: https://github.com/henrysky
+.. _jobovy: https://github.com/jobovy
 
 Information on ``aj485195t4_mrt.txt`` for Open/Globular Cluster Benchmark
 --------------------------------------------------------------------------
@@ -128,5 +141,3 @@ License
 This project is licensed under the MIT License - see the `LICENSE`_ file for details
 
 .. _LICENSE: LICENSE
-.. _henrysky: https://github.com/henrysky
-.. _jobovy: https://github.com/jobovy
