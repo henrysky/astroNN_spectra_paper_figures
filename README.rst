@@ -26,13 +26,14 @@ and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_s
 
 .. _astroNN: https://github.com/henrysky/astroNN
 
-`Datasets_Data_Reduction.ipynb`_: You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
-
-`Inference_highSNR.ipynb`_: It describes the inference process and result on spectra within SNR 100-200.
-
-`Inference.ipynb`_: It describes the inference process and result on individual visit spectra which their combined counterpart SNR > 200.
-
-`Open_Globular_Cluster_Benchmark.ipynb`_: It describes the inference on Open/Globular Cluster.
+-   | `Datasets_Data_Reduction.ipynb`_
+    | You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
+-   | `Inference_highSNR.ipynb`_
+    | It describes the inference process and result on spectra within SNR 100-200.
+-   | `Inference.ipynb`_
+    | It describes the inference process and result on individual visit spectra which their combined counterpart SNR > 200.
+-   | `Open_Globular_Cluster_Benchmark.ipynb`_
+    | It describes the inference on Open/Globular Cluster.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
