@@ -26,6 +26,8 @@ and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_s
 
 .. _astroNN: https://github.com/henrysky/astroNN
 
+Jupyter Notebook
+------------------
 -   | `Datasets_Data_Reduction.ipynb`_
     | You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
 -   | `Inference_highSNR.ipynb`_
@@ -40,13 +42,11 @@ and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_s
 .. _Inference.ipynb: Inference.ipynb
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
 
-``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN`_ class model to infer 22 stellar parameters and stellar
-intrinsic brightness from APOGEE spectra. Please notice the trained model is used for TESTING  propose only to ensure
-the code run correctly with reasonable result.
+Nueral Net Models
+------------------
+``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
-``astroNN_0605_run007`` is a trained astroNN's `ApogeeBCNNCensored`_ class model to infer 22 stellar parameters and stellar
-intrinsic brightness from APOGEE spectra. Please notice the trained model is used for TESTING propose only to ensure
-the code run correctly with reasonable result.
+``astroNN_0605_run007`` is a trained astroNN's `ApogeeBCNNCensored`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
 .. _ApogeeBCNN: http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
@@ -72,7 +72,7 @@ Some graphs require the package `mw_plot` from my `milkyway_plot Github`_
 To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#pseudo-continuum-normalization-of-apogee-spectra
 
 Authors
--------------
+=================
 -  | **Henry Leung** - henrysky_
    | Student, Department of Astronomy and Astrophysics, University of Toronto
    | Contact Henry: henrysky.leung [at] mail.utoronto.ca
@@ -84,7 +84,7 @@ Authors
 .. _jobovy: https://github.com/jobovy
 
 Information on ``aj485195t4_mrt.txt`` for Open/Globular Cluster Benchmark
---------------------------------------------------------------------------
+=============================================================================
 
 The original header of the .txt file has been removed, the original header of the file is as follow:
 
