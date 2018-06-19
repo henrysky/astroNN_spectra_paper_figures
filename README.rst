@@ -46,19 +46,19 @@ Nueral Net Models
 ------------------
 - ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
-- ``astroNN_0605_run007`` is a trained astroNN's `ApogeeBCNNCensored`_ class model to infer 22 stellar parameters from APOGEE spectra.
+- ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
 .. _ApogeeBCNN: http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
 .. _ApogeeBCNNCensored: http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnncensored.html
 
-To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0605_run007``
+To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617_run001``
 
 .. code-block:: python
 
    from astroNN.models import load_folder
 
-   neuralnet = load_folder('astroNN_0605_run007')
+   neuralnet = load_folder('astroNN_0617_run001')
    # neuralnet is an astroNN neural network object, to learn more;
    # http://astronn.readthedocs.io/en/latest/neuralnets/basic_usage.html
 
