@@ -36,11 +36,14 @@ Jupyter Notebook
     | It describes the inference process and result on individual visit spectra which their combined counterpart SNR > 200.
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
     | It describes the inference on Open/Globular Cluster.
+-   | `Apogee_dr14_NN_Catalog.ipynb`_
+    | It describes how to generate stellar parameters and abundnaces for the whole APOGEE DR14.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
 .. _Inference.ipynb: Inference.ipynb
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
+.. _Apogee_dr14_NN_Catalog.ipynb: Apogee_dr14_NN_Catalog.ipynb
 
 Nueral Net Models
 ------------------
