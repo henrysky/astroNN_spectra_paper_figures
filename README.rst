@@ -24,7 +24,10 @@ This repository is to make sure all figures and results are reproducible by anyo
 To get started, this paper use `astroNN`_ developed by the authors. Extensive documentation at http://astroNN.readthedocs.io
 and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
 
+Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
+
 .. _astroNN: https://github.com/henrysky/astroNN
+.. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
 Jupyter Notebook
 ------------------
@@ -33,7 +36,7 @@ Jupyter Notebook
 -   | `Inference_highSNR.ipynb`_
     | It describes the inference process and result on spectra within SNR 100-200, also includes an isochrone plot and jacobian analysis.
 -   | `Inference.ipynb`_
-    | It describes the inference process and result on individual visit spectra which their combined counterpart SNR > 200.
+    | It describes the inference process and result on individual visit spectra which their combined counterpart in training set.
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
     | It describes the inference on Open/Globular Cluster.
 -   | `Apogee_dr14_NN_Catalog.ipynb`_
