@@ -40,13 +40,32 @@ Jupyter Notebook
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
     | It describes the inference on Open/Globular Cluster.
 -   | `Apogee_dr14_NN_Catalog.ipynb`_
-    | It describes how to generate stellar parameters and abundnaces for the whole APOGEE DR14.
+    | It describes how to generate stellar parameters and abundnaces for the whole APOGEE DR14, also contains plots of abundances across MilkyWay Galaxy.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
 .. _Inference.ipynb: Inference.ipynb
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
 .. _Apogee_dr14_NN_Catalog.ipynb: Apogee_dr14_NN_Catalog.ipynb
+
+astroNN Apogee DR14 Stellar Parameters and Abundances
+------------------------------------------------------
+
+``astroNN_apogee_dr14_catalog.fits`` is compiled prediction with ``astroNN_0617_run001`` on the whole Apogee DR14. To load it with python
+
+.. code-block:: python
+
+    from astropy.io import fits
+
+    f = fits.open("astroNN_apogee_dr14_catalog.fits")
+    APOGEE_ID = f[1].data['APOGEE_ID']  # APOGEE's apogee id
+    LOCATION_ID = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
+    RA = f[1].data['RA']  #J2000 RA
+    DEC = f[1].data['DEC']  #J2000 RA
+    # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
+    # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
+    nn_prediction = f[1].data['astroNN']  #neural network prediction, contains -9999.
+    nn_uncertainty = f[1].data['astroNN_error']  #neural network uncertainty, contains -9999.
 
 Nueral Net Models
 ------------------
@@ -62,14 +81,14 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617
 
 .. code-block:: python
 
-   from astroNN.models import load_folder
+    from astroNN.models import load_folder
 
-   neuralnet = load_folder('astroNN_0617_run001')
-   # neuralnet is an astroNN neural network object, to learn more;
-   # http://astronn.readthedocs.io/en/latest/neuralnets/basic_usage.html
+    neuralnet = load_folder('astroNN_0617_run001')
+    # neuralnet is an astroNN neural network object, to learn more;
+    # http://astronn.readthedocs.io/en/latest/neuralnets/basic_usage.html
 
-   # To get what the output neurones are representing
-   print(neuralnet.targetname)
+    # To get what the output neurones are representing
+    print(neuralnet.targetname)
 
 Some graphs require the package `mw_plot` from my `milkyway_plot Github`_
 
