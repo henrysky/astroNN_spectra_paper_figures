@@ -1,6 +1,6 @@
 
-Project Abstract
-==================
+Abstract
+===========
 
 Deep learning using artificial neural network is getting attention from astronomers with its potential in data-driven astronomy.
 However, such methodology usually do not capture uncertainty intervals and do not deal with incomplete data. In recent development driven by
@@ -19,7 +19,8 @@ https://github.com/henrysky/astroNN with extensive documentation at http://astro
 Getting Started
 =================
 
-This repository is to make sure all figures and results are reproducible by anyone easily for this paper.
+This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
+above is required. The presence of Nvidia GPUs 900 series or above is recommended for Tensorlfow hardware acceleration.
 
 To get started, this paper use `astroNN`_ developed by the authors. Extensive documentation at http://astroNN.readthedocs.io
 and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
@@ -62,6 +63,7 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
     LOCATION_ID = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
     RA = f[1].data['RA']  #J2000 RA
     DEC = f[1].data['DEC']  #J2000 RA
+
     # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
     # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
     nn_prediction = f[1].data['astroNN']  #neural network prediction, contains -9999.
@@ -69,13 +71,13 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
 
 Nueral Net Models
 ------------------
-- ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN`_ class model to infer 22 stellar parameters from APOGEE spectra.
+- ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN()`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
-- ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored`_ class model to infer 22 stellar parameters from APOGEE spectra.
+- ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE spectra.
 
-.. _ApogeeBCNN: http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
+.. _ApogeeBCNN(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
-.. _ApogeeBCNNCensored: http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnncensored.html
+.. _ApogeeBCNNCensored(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnncensored.html
 
 To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617_run001``
 
