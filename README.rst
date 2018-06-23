@@ -22,7 +22,7 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
 above is required. The presence of Nvidia GPUs 900 series or above is recommended for Tensorlfow hardware acceleration.
 
-To get started, this paper use `astroNN`_ developed by the authors and tested against astroNN 1.0.0. Extensive
+To get started, this paper use `astroNN`_ developed by the authors and tested with astroNN 1.0.0 (Not yet released). Extensive
 documentation at http://astroNN.readthedocs.io and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
 
 Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
@@ -48,6 +48,8 @@ Jupyter Notebook
     | It describes how to generate stellar parameters and abundnaces for the whole APOGEE DR14, also contains plots of abundances across MilkyWay Galaxy.
 -   | `ASPCAP_Normalization.ipynb`_
     | It describes how to compile dataset with ASPCAP normalized spectra (as opposed to continuum normalization), training and testing NN on that.
+-   | `Small_Data.ipynb`_
+    | It describes training neural network with smaller datasets and see the effects.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Training.ipynb: Training.ipynb
@@ -56,6 +58,7 @@ Jupyter Notebook
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
 .. _Apogee_dr14_NN_Catalog.ipynb: Apogee_dr14_NN_Catalog.ipynb
 .. _ASPCAP_Normalization.ipynb: ASPCAP_Normalization.ipynb
+.. _Small_Data.ipynb: Small_Data.ipynb
 
 astroNN Apogee DR14 Stellar Parameters and Abundances
 ------------------------------------------------------
@@ -84,6 +87,8 @@ Nueral Net Models
 - ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
 
 - ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra.
+
+- ``small_data_fixed_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset.
 
 .. _ApogeeBCNN(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 

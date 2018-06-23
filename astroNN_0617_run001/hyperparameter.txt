@@ -2,7 +2,7 @@ Model: Bayesian Convolutional Neural Network
 Model Type: BCNN 
 astroNN identifier: ApogeeBCNNCensored 
 Python Version: 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)] 
-astroNN Version: 0.9.2.9 
+astroNN Version: 1.0.0
 Keras Version: 2.2.0 
 Tensorflow Version: 1.8.0 
 Folder Name: astroNN_0617_run001 
