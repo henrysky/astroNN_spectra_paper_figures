@@ -34,6 +34,8 @@ Jupyter Notebook
 ------------------
 -   | `Datasets_Data_Reduction.ipynb`_
     | You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
+-   | `Training.ipynb`_
+    | It provided the code used to train ``astroNN_0606_run001``  and ``astroNN_0617_run001``
 -   | `Inference_highSNR.ipynb`_
     | It describes the inference process and result on spectra within SNR 100-200, also includes an isochrone plot and jacobian analysis.
 -   | `Inference.ipynb`_
@@ -46,6 +48,7 @@ Jupyter Notebook
     | It describes how to compile dataset with ASPCAP normalized spectra (as opposed to continuum normalization), training and testing NN on that.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
+.. _Training.ipynb: Training.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
 .. _Inference.ipynb: Inference.ipynb
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
@@ -74,9 +77,11 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
 
 Nueral Net Models
 ------------------
-- ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN()`_ class model to infer 22 stellar parameters from APOGEE spectra.
+- ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
 
-- ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE spectra.
+- ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
+
+- ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra.
 
 .. _ApogeeBCNN(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
