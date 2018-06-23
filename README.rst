@@ -30,6 +30,8 @@ Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
 .. _astroNN: https://github.com/henrysky/astroNN
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
+To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#pseudo-continuum-normalization-of-apogee-spectra
+
 Jupyter Notebook
 ------------------
 -   | `Datasets_Data_Reduction.ipynb`_
@@ -99,12 +101,6 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617
 
     # To get what the output neurones are representing
     print(neuralnet.targetname)
-
-Some graphs require the package `mw_plot` from my `milkyway_plot Github`_
-
-.. _milkyway_plot Github: https://github.com/henrysky/milkyway_plot
-
-To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#pseudo-continuum-normalization-of-apogee-spectra
 
 Authors
 =================
