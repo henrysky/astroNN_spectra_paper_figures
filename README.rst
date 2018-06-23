@@ -45,7 +45,7 @@ Jupyter Notebook
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
     | It describes the inference on Open/Globular Cluster.
 -   | `Apogee_dr14_NN_Catalog.ipynb`_
-    | It describes how to generate stellar parameters and abundnaces for the whole APOGEE DR14, also contains plots of abundances across MilkyWay Galaxy.
+    | It describes how to generate stellar parameters and abundances for the whole APOGEE DR14, also contains plots of abundances across MilkyWay Galaxy.
 -   | `ASPCAP_Normalization.ipynb`_
     | It describes how to compile dataset with ASPCAP normalized spectra (as opposed to continuum normalization), training and testing NN on that.
 -   | `Small_Data.ipynb`_
