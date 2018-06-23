@@ -86,9 +86,11 @@ Nueral Net Models
 
 - ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
 
-- ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra.
+- ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra, with exactly the same model architecture as ``astroNN_0617_run001``..
 
-- ``small_data_fixed_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset.
+- ``small_data_fixed_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset, with exactly the same model architecture as ``astroNN_0617_run001``.
+
+- ``small_data_adaptive_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset, with adaptive model architecture as dataset gets smaller.
 
 .. _ApogeeBCNN(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
