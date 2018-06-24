@@ -70,10 +70,10 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
     from astropy.io import fits
 
     f = fits.open("astroNN_apogee_dr14_catalog.fits")
-    APOGEE_ID = f[1].data['APOGEE_ID']  # APOGEE's apogee id
-    LOCATION_ID = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
-    RA = f[1].data['RA']  #J2000 RA
-    DEC = f[1].data['DEC']  #J2000 RA
+    apogee_id = f[1].data['APOGEE_ID']  # APOGEE's apogee id
+    location_id = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
+    ra = f[1].data['RA']  #J2000 RA
+    dec = f[1].data['DEC']  #J2000 RA
 
     # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
     # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
