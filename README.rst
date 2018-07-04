@@ -22,7 +22,7 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
 above is required. The presence of Nvidia GPUs 900 series or above is recommended for Tensorlfow hardware acceleration.
 
-To get started, this paper use `astroNN`_ developed by the authors and tested with astroNN 1.0.0 (Not yet released). Extensive
+To get started, this paper use `astroNN`_ developed by the authors and tested with **astroNN 1.0.0 (Not yet released)**. Extensive
 documentation at http://astroNN.readthedocs.io and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
 
 Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.

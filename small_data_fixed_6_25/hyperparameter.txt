@@ -5,7 +5,7 @@ Python Version: 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1
 astroNN Version: 1.0.0rc0 
 Keras Version: 2.2.0 
 Tensorflow Version: 1.8.0 
-Folder Name: small_model_fixed_6_25 
+Folder Name: small_data_fixed_6_25 
 Batch size: 64 
 Optimizer: Adam 
 Maximum Epochs: 60 
