@@ -42,6 +42,8 @@ Jupyter Notebook
     | It describes the inference process and result on spectra within SNR 100-200, also includes an isochrone plot and jacobian analysis.
 -   | `Inference.ipynb`_
     | It describes the inference process and result on individual visit spectra which their combined counterpart in training set.
+-   | `Inference_ApogeeBCNN.ipynb`_
+    | It describes the inference process and result on spectra within SNR 100-200 with ``astroNN_0606_run001``.
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
     | It describes the inference on Open/Globular Cluster.
 -   | `Apogee_dr14_NN_Catalog.ipynb`_
@@ -55,6 +57,7 @@ Jupyter Notebook
 .. _Training.ipynb: Training.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
 .. _Inference.ipynb: Inference.ipynb
+.. _Inference_ApogeeBCNN.ipynb: Inference_ApogeeBCNN.ipynb
 .. _Open_Globular_Cluster_Benchmark.ipynb: Open_Globular_Cluster_Benchmark.ipynb
 .. _Apogee_dr14_NN_Catalog.ipynb: Apogee_dr14_NN_Catalog.ipynb
 .. _ASPCAP_Normalization.ipynb: ASPCAP_Normalization.ipynb
