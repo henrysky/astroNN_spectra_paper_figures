@@ -39,9 +39,11 @@ Jupyter Notebook
 -   | `Training.ipynb`_
     | It provided the code used to train ``astroNN_0606_run001``  and ``astroNN_0617_run001``
 -   | `Inference_highSNR.ipynb`_
-    | It describes the inference process and result on spectra within SNR 100-200, also includes an isochrone plot and jacobian analysis.
+    | It describes the inference process and result on spectra within SNR 100-200, also includes an isochrone plot and
+    | jacobian analysis with ``astroNN_0617_run001``.
 -   | `Inference.ipynb`_
-    | It describes the inference process and result on individual visit spectra which their combined counterpart in training set.
+    | It describes the inference process and result on individual visit spectra which their combined counterpart in
+    | training set with ``astroNN_0617_run001``.
 -   | `Inference_ApogeeBCNN.ipynb`_
     | It describes the inference process and result on spectra within SNR 100-200 with ``astroNN_0606_run001``.
 -   | `Open_Globular_Cluster_Benchmark.ipynb`_
