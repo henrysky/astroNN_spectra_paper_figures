@@ -30,7 +30,7 @@ Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
 .. _astroNN: https://github.com/henrysky/astroNN
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
-To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectr
+To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectra
 
 Jupyter Notebook
 ------------------
