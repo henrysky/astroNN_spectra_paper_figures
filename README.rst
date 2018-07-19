@@ -78,7 +78,7 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
     apogee_id = f[1].data['APOGEE_ID']  # APOGEE's apogee id
     location_id = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
     ra = f[1].data['RA']  #J2000 RA
-    dec = f[1].data['DEC']  #J2000 RA
+    dec = f[1].data['DEC']  #J2000 DEC
 
     # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
     # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
@@ -107,6 +107,7 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617
 
     from astroNN.models import load_folder
 
+    # replace the name of the NN folder you want to open
     neuralnet = load_folder('astroNN_0617_run001')
     # neuralnet is an astroNN neural network object, to learn more;
     # http://astronn.readthedocs.io/en/latest/neuralnets/basic_usage.html
