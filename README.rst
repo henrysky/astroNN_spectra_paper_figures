@@ -31,7 +31,7 @@ Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
 To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectra
-
+To do inference on arbitrary APOGEE spectrum with neural network in this work, :ref:`follow instruction here <.. apogeecode-anchor:>`
 Jupyter Notebook
 ------------------
 -   | `Datasets_Data_Reduction.ipynb`_
@@ -65,26 +65,6 @@ Jupyter Notebook
 .. _ASPCAP_Normalization.ipynb: ASPCAP_Normalization.ipynb
 .. _Small_Data.ipynb: Small_Data.ipynb
 
-astroNN Apogee DR14 Stellar Parameters and Abundances
-------------------------------------------------------
-
-``astroNN_apogee_dr14_catalog.fits`` is compiled prediction with ``astroNN_0617_run001`` on the whole Apogee DR14. To load it with python
-
-.. code-block:: python
-
-    from astropy.io import fits
-
-    f = fits.open("astroNN_apogee_dr14_catalog.fits")
-    apogee_id = f[1].data['APOGEE_ID']  # APOGEE's apogee id
-    location_id = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
-    ra = f[1].data['RA']  #J2000 RA
-    dec = f[1].data['DEC']  #J2000 DEC
-
-    # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
-    # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
-    nn_prediction = f[1].data['astroNN']  #neural network prediction, contains -9999.
-    nn_uncertainty = f[1].data['astroNN_error']  #neural network uncertainty, contains -9999.
-
 Nueral Net Models
 ------------------
 - ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
@@ -114,6 +94,62 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617
 
     # To get what the output neurones are representing
     print(neuralnet.targetname)
+
+astroNN Apogee DR14 Stellar Parameters and Abundances
+------------------------------------------------------
+
+``astroNN_apogee_dr14_catalog.fits`` is compiled prediction with ``astroNN_0617_run001`` on the whole Apogee DR14. To load it with python
+
+.. code-block:: python
+
+    from astropy.io import fits
+
+    f = fits.open("astroNN_apogee_dr14_catalog.fits")
+    apogee_id = f[1].data['APOGEE_ID']  # APOGEE's apogee id
+    location_id = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
+    ra = f[1].data['RA']  #J2000 RA
+    dec = f[1].data['DEC']  #J2000 DEC
+
+    # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
+    # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
+    nn_prediction = f[1].data['astroNN']  #neural network prediction, contains -9999.
+    nn_uncertainty = f[1].data['astroNN_error']  #neural network uncertainty, contains -9999.
+
+
+Example of using Neural Net to infer parameters and abundances on APOGEE spectra
+-------------------------------------------------------------------------------------
+.. apogeecode-anchor:
+
+To do inference on an arbitrary APOGEE spectrum,
+
+1. Open python under the repository folder but outside the folder ``astroNN_0617_run001``
+2. Copy and paste the following code to do inference with neural net in this paper on ``2M19060637+4717296``
+
+.. code-block:: python
+
+    from astropy.io import fits
+    from astroNN.apogee import visit_spectra, apogee_continuum
+    from astroNN.models import load_folder
+
+    # the same spectrum used in figure 5
+    opened_fits = fits.open(visit_spectra(dr=14, location=4405, apogee='2M19060637+4717296'))
+    spectrum = opened_fits[1].data
+    spectrum_err = opened_fits[2].data
+    spectrum_bitmask = opened_fits[3].data
+
+    #using default continuum and bitmask values to continuum normalize
+    norm_spec, norm_spec_err = apogee_continuum(spectrum, spectrum_err,
+                                                bitmask=spectrum_bitmask, dr=14)
+
+    #load neural net
+    neuralnet = load_folder('astroNN_0617_run001')
+
+    # inference
+    pred, pred_err = neuralnet.test(norm_spec)
+
+    print(neuralnet.targetname)  # output neurons representation
+    print(pred)  # prediction
+    print(pred_err['total'])  # prediction uncertainty
 
 Authors
 =================
