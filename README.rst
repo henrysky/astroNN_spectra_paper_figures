@@ -31,7 +31,8 @@ Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
 To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectra
-To do inference on arbitrary APOGEE spectrum with neural network in this work, :ref:`follow instruction here <.. apogeecode-anchor:>`
+To do inference on arbitrary APOGEE spectrum with neural network in this work, :ref:`follow instruction here <apogeecode-anchor>`
+
 Jupyter Notebook
 ------------------
 -   | `Datasets_Data_Reduction.ipynb`_
