@@ -31,7 +31,6 @@ Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
 To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectra
-To do inference on arbitrary APOGEE spectrum with neural network in this work, :ref:`follow instruction here <apogeecode-anchor>`
 
 Jupyter Notebook
 ------------------
@@ -117,9 +116,8 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
     nn_uncertainty = f[1].data['astroNN_error']  #neural network uncertainty, contains -9999.
 
 
-Example of using Neural Net to infer parameters and abundances on APOGEE spectra
--------------------------------------------------------------------------------------
-.. apogeecode-anchor:
+Using Neural Net on arbitrary APOGEE spectra
+-----------------------------------------------
 
 To do inference on an arbitrary APOGEE spectrum,
 
