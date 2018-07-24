@@ -131,7 +131,7 @@ To do inference on an arbitrary APOGEE spectrum,
     from astroNN.models import load_folder
 
     # the same spectrum used in figure 5
-    opened_fits = fits.open(visit_spectra(dr=14, location=4405, apogee='2M19060637+4717296'))
+    opened_fits = fits.open(visit_spectra(dr=14, apogee='2M19060637+4717296'))
     spectrum = opened_fits[1].data
     spectrum_err = opened_fits[2].data
     spectrum_bitmask = opened_fits[3].data
