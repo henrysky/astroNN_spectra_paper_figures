@@ -53,7 +53,7 @@ Jupyter Notebook
 -   | `ASPCAP_Normalization.ipynb`_
     | It describes how to compile dataset with ASPCAP normalized spectra (as opposed to continuum normalization), training and testing NN on that.
 -   | `Small_Data.ipynb`_
-    | It describes training neural network with smaller datasets and see the effects.
+    | It describes training neural network with smaller datasets and see the performance.
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Training.ipynb: Training.ipynb
@@ -74,8 +74,6 @@ Nueral Net Models
 - ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra, with exactly the same model architecture as ``astroNN_0617_run001``..
 
 - ``small_data_fixed_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset, with exactly the same model architecture as ``astroNN_0617_run001``.
-
-- ``small_data_adaptive_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset, with adaptive model architecture as dataset gets smaller.
 
 .. _ApogeeBCNN(): http://astronn.readthedocs.io/en/latest/neuralnets/apogee_bcnn.html
 
