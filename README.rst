@@ -20,12 +20,12 @@ Getting Started
 =================
 
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
-above is required. The presence of Nvidia GPUs 900 series or above is recommended for Tensorlfow hardware acceleration.
+above and reasonable computational resource is required.
 
-To get started, this paper use `astroNN`_ developed by the authors and tested with **astroNN 1.0.0 (Not yet released)**. Extensive
-documentation at http://astroNN.readthedocs.io and astroNN quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
+To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0 (Not yet released)**. Extensive
+documentation at http://astroNN.readthedocs.io and quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
 
-Some notebooks also make use of my `milkyway_plot`_ to plot on milkyway.
+Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 
 .. _astroNN: https://github.com/henrysky/astroNN
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
@@ -65,7 +65,7 @@ Jupyter Notebook
 .. _ASPCAP_Normalization.ipynb: ASPCAP_Normalization.ipynb
 .. _Small_Data.ipynb: Small_Data.ipynb
 
-Nueral Net Models
+Neural Net Models
 ------------------
 - ``astroNN_0606_run001`` is a trained astroNN's `ApogeeBCNN()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
 
