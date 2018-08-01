@@ -22,15 +22,15 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
 above and reasonable computational resource is required.
 
-To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0 (Not yet released)**. Extensive
-documentation at http://astroNN.readthedocs.io and quick start guide at http://astronn.readthedocs.io/en/latest/quick_start.html
+To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0**. Extensive
+documentation of v1.0.0 at https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html
 
 Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 
 .. _astroNN: https://github.com/henrysky/astroNN
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
-To continuum normalize arbitrary APOGEE spectrum, see: http://astronn.readthedocs.io/en/latest/tools_apogee.html#continuum-normalization-of-apogee-spectra
+To continuum normalize arbitrary APOGEE spectrum with v1.0.0, see: https://astronn.readthedocs.io/en/v1.0.0/tools_apogee.html#continuum-normalization-of-apogee-spectra
 
 Jupyter Notebook
 ------------------
@@ -141,7 +141,8 @@ To do inference on an arbitrary APOGEE spectrum,
     #load neural net
     neuralnet = load_folder('astroNN_0617_run001')
 
-    # inference
+    # inference, if there are multiple visits, then you should use the global
+    # weighting combined spectra
     pred, pred_err = neuralnet.test(norm_spec)
 
     print(neuralnet.targetname)  # output neurons representation
