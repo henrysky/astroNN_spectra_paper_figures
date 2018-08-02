@@ -2,18 +2,22 @@
 Abstract
 ===========
 
-Deep learning using artificial neural network is getting attention from astronomers with its potential in data-driven astronomy.
-However, such methodology usually do not capture uncertainty intervals and do not deal with incomplete data. In recent development driven by
-the demand of uncertainties estimation from industries, Bayesian neural network with dropout variational inference offers an opportunity
-to achieve such goal with a simple computationally cheap setup. In this work, we will demonstrate using dropout variational inference technique
-as well as customized objective function to deal with incomplete data to infer 22 stellar parameters from APOGEE stellar spectra and APOGEE
-Stellar Parameter and Chemical Abundance Pipeline
-:math:`(Teff, log(g), C, CI, N, O, Na, Mg, Al, Si, P, S, K, Ca, Ti, TiII, V, Cr, Mn, Fe, Co, Ni)`
-with reasonable uncertainty interval. By training on high SNR combined spectra mainly on red giant stars, the testing on
-corresponding low SNR individual visit spectra shows the neural network inferred all stellar parameters with excellent
-accuracy and reasonable model dependency on both prediction and uncertainty estimation. With upcoming precise Gaia parallax in Data Release 2, we suggest
-this technique can also be used to infer intrinsic brightness from stellar spectra without any stellar model assumption. **astroNN**, a well tested active
-developing open-source python package created for this work as well as designed to be a general package for deep learning in astronomy, is available at
+Deep learning with artificial neural networks is increasingly gaining attention from astronomers because of its potential
+for data-driven astronomy. However, this methodology usually does not provide uncertainties and does not deal with incompleteness
+and noise in the training data. In this work, we investigate these issues in the context of high-resolution spectroscopic
+analysis using APOGEE data. We design a complex neural-network that mimics the methodology of standard spectroscopic analyses
+by using the full spectral range to determine stellar parameters, but only censored portions of the spectrum for determining
+individual element abundances. We train this network with a customized objective function that deals with incomplete and
+noisy training data and apply dropout variational inference to derive uncertainties on our predictions. We can successfully
+determine parameters and abundances for 18 individual elements at the ≈ 0.03dex level, even at low
+signal-to-noise ratio and even when only training on data sets consisting of a few thousand stars. We demonstrate that
+the uncertainties returned by our method are a realistic estimate of the precision and they automatically blow up when
+inputs or outputs outside of the training set are used, thus shielding the user from unwanted extrapolation in the
+high-dimensional space of inputs and outputs. By making use of standard deep-learning tools for GPU acceleration, our
+method is extremely fast, allowing analysis of the entire APOGEE data set in ten minutes on a singe, low-cost GPU. We
+release the stellar parameters and 18 individual-element abundances with associated uncertainty for the entire APOGEE
+DR14 dataset. Simultaneously, we release `astroNN`, a well-tested, open-source python package developed for this
+work, but that is also designed to be a general package for deep learning in astronomy. `astroNN` is available at
 https://github.com/henrysky/astroNN with extensive documentation at http://astroNN.readthedocs.io.
 
 Getting Started
