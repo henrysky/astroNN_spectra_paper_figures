@@ -26,6 +26,8 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
 above and reasonable computational resource is required.
 
+If Github has issue (or too slow) to load the Jupyter Notebooks, you can go http://nbviewer.jupyter.org/github/henrysky/astroNN_spectra_paper_figures/tree/master/
+
 To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0**. Extensive
 documentation of v1.0.0 at https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html
 
@@ -145,8 +147,8 @@ To do inference on an arbitrary APOGEE spectrum,
     #load neural net
     neuralnet = load_folder('astroNN_0617_run001')
 
-    # inference, if there are multiple visits, then you should use the global
-    # weighting combined spectra
+    # inference, if there are multiple visits, then you should use the globally
+    # weighted combined spectra (i.e. the second row)
     pred, pred_err = neuralnet.test(norm_spec)
 
     print(neuralnet.targetname)  # output neurons representation
