@@ -14,8 +14,8 @@ are a realistic estimate of the precision and they automatically blow up when in
 set are encountered, thus shielding users from unwanted extrapolation. By using standard deep-learning tools for GPU
 acceleration, our method is extremely fast, allowing analysis of the entire APOGEE data set in ten minutes on a singe,
 low-cost GPU. We release the stellar parameters and 18 individual-element abundances with associated uncertainty for the
-entire APOGEE DR14 dataset. Simultaneously, we release \texttt{astroNN}, a well-tested, open-source python package
-developed for this work, but that is also designed to be a general package for deep learning in astronomy. `astroNN` is
+entire APOGEE DR14 dataset. Simultaneously, we release ``astroNN``, a well-tested, open-source python package
+developed for this work, but that is also designed to be a general package for deep learning in astronomy. ``astroNN`` is
 available at https://github.com/henrysky/astroNN with extensive documentation at http://astroNN.readthedocs.io.
 
 Getting Started
