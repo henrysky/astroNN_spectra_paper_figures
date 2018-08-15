@@ -21,13 +21,17 @@ available at https://github.com/henrysky/astroNN with extensive documentation at
 Getting Started
 =================
 
-This repository is to make sure all figures and results are reproducible by anyone easily for this paper. Python 3.6 or
-above and reasonable computational resource is required.
+This repository is to make sure all figures and results are reproducible by anyone easily for this paper [`arXiv:1804.08622`_][`ADS`_].
 
-If Github has issue (or too slow) to load the Jupyter Notebooks, you can go http://nbviewer.jupyter.org/github/henrysky/astroNN_spectra_paper_figures/tree/master/
+.. _arXiv:1804.08622: https://arxiv.org/abs/1808.04428
+.. _ADS: https://ui.adsabs.harvard.edu/#abs/2018arXiv180804428L/
 
-To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0**. Extensive
-documentation of v1.0.0 at https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html
+If Github has issue (or too slow) to load the Jupyter Notebooks, you can go
+http://nbviewer.jupyter.org/github/henrysky/astroNN_spectra_paper_figures/tree/master/
+
+To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0** which Python 3.6 or above
+and reasonable computational resource is required. Extensive documentation of v1.0.0 at
+https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html
 
 Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 
