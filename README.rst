@@ -12,7 +12,7 @@ inference to derive uncertainties on our predictions. We determine parameters an
 at the ≈0.03dex level, even at low signal-to-noise ratio. We demonstrate that the uncertainties returned by our method
 are a realistic estimate of the precision and they automatically blow up when inputs or outputs outside of the training
 set are encountered, thus shielding users from unwanted extrapolation. By using standard deep-learning tools for GPU
-acceleration, our method is extremely fast, allowing analysis of the entire APOGEE data set in ten minutes on a singe,
+acceleration, our method is extremely fast, allowing analysis of the entire APOGEE data set in ten minutes on a single,
 low-cost GPU. We release the stellar parameters and 18 individual-element abundances with associated uncertainty for the
 entire APOGEE DR14 dataset. Simultaneously, we release ``astroNN``, a well-tested, open-source python package
 developed for this work, but that is also designed to be a general package for deep learning in astronomy. ``astroNN`` is
@@ -110,17 +110,16 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
 
     from astropy.io import fits
 
-    f = fits.open("astroNN_apogee_dr14_catalog.fits")
-    apogee_id = f[1].data['APOGEE_ID']  # APOGEE's apogee id
-    location_id = f[1].data['LOCATION_ID']  # APOGEE DR14 location id
-    ra = f[1].data['RA']  #J2000 RA
-    dec = f[1].data['DEC']  #J2000 DEC
+    f = fits.getdata("astroNN_apogee_dr14_catalog.fits")
+    apogee_id = f['APOGEE_ID']  # APOGEE's apogee id
+    location_id = f['LOCATION_ID']  # APOGEE DR14 location id
+    ra = f['RA']  # J2000 RA
+    dec = f['DEC']  # J2000 DEC
 
     # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
     # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
-    nn_prediction = f[1].data['astroNN']  #neural network prediction, contains -9999.
-    nn_uncertainty = f[1].data['astroNN_error']  #neural network uncertainty, contains -9999.
-
+    nn_prediction = f['astroNN']  # neural network prediction, contains -9999.
+    nn_uncertainty = f['astroNN_error']  # neural network uncertainty, contains -9999.
 
 Using Neural Net on arbitrary APOGEE spectra
 -----------------------------------------------
@@ -142,11 +141,11 @@ To do inference on an arbitrary APOGEE spectrum,
     spectrum_err = opened_fits[2].data
     spectrum_bitmask = opened_fits[3].data
 
-    #using default continuum and bitmask values to continuum normalize
+    # using default continuum and bitmask values to continuum normalize
     norm_spec, norm_spec_err = apogee_continuum(spectrum, spectrum_err,
                                                 bitmask=spectrum_bitmask, dr=14)
 
-    #load neural net
+    # load neural net
     neuralnet = load_folder('astroNN_0617_run001')
 
     # inference, if there are multiple visits, then you should use the globally
@@ -156,6 +155,33 @@ To do inference on an arbitrary APOGEE spectrum,
     print(neuralnet.targetname)  # output neurons representation
     print(pred)  # prediction
     print(pred_err['total'])  # prediction uncertainty
+
+External Data (ThePayne)
+---------------------------
+
+`ThePayne_dr14_catalog.fits`_ is compiled from the data provided in the paper https://arxiv.org/abs/1804.01530
+
+To load it with python
+
+.. code-block:: python
+
+    from astropy.io import fits
+
+    # the order is correspond to APOGEE DR14 allstar
+    f = fits.getdata("ThePayne_dr14_catalog.fits")
+    apogee_id = f['APOGEE_ID']  # APOGEE's apogee id
+    location_id = f['LOCATION_ID']  # APOGEE DR14 location id
+    ra = f['RA']  # J2000 RA
+    dec = f['DEC']  # J2000 DEC
+
+    # the order of the array is [Teff, log(g), C/H, C1/H, N/H, O/H, Na/H, Mg/H, Al/H, Si/H, P/H, S/H, K/H, Ca/H, Ti/H,
+    # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H], same as astroNN DR14 order
+    payne_prediction = f['payne']  # ThePayne data, contains -9999.
+
+    # good flag is 1, bad flag is 0
+    payne_good_flag = f['good_flag']  # ThePayne quality flag
+
+.. _`ThePayne_dr14_catalog.fits`: https://github.com/henrysky/astroNN_spectra_paper_figures/raw/master/external_data/ThePayne_dr14_catalog.fits
 
 Authors
 =================
