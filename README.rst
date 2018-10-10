@@ -31,7 +31,8 @@ http://nbviewer.jupyter.org/github/henrysky/astroNN_spectra_paper_figures/tree/m
 
 To get started, this paper uses `astroNN`_ developed by us and tested with **astroNN 1.0.0** which Python 3.6 or above
 and reasonable computational resource is required. Extensive documentation of v1.0.0 at
-https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html
+https://astronn.readthedocs.io/en/v1.0.0/ and quick start guide at https://astronn.readthedocs.io/en/v1.0.0/quick_start.html.
+astroNN Apogee DR14 Stellar Parameters and Abundances data is available as `astroNN_apogee_dr14_catalog.fits`_.
 
 Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 
@@ -79,7 +80,7 @@ Neural Net Models
 
 - ``astroNN_0617_run001`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE continuum normalized spectra.
 
-- ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra, with exactly the same model architecture as ``astroNN_0617_run001``..
+- ``aspcapStar_BCNNCensored`` is a trained astroNN's `ApogeeBCNNCensored()`_ class model to infer 22 stellar parameters from APOGEE ASPCAP-normalized spectra, with exactly the same model architecture as ``astroNN_0617_run001``.
 
 - ``small_data_fixed_****`` are trained astroNN's `ApogeeBCNNCensored()`_ class models with small dataset, with exactly the same model architecture as ``astroNN_0617_run001``.
 
@@ -104,7 +105,7 @@ To load the model, open python outside ``astroNN_0606_run001`` or ``astroNN_0617
 astroNN Apogee DR14 Stellar Parameters and Abundances
 ------------------------------------------------------
 
-``astroNN_apogee_dr14_catalog.fits`` is compiled prediction with ``astroNN_0617_run001`` on the whole Apogee DR14. To load it with python
+`astroNN_apogee_dr14_catalog.fits`_ is compiled prediction with ``astroNN_0617_run001`` on the whole Apogee DR14. To load it with python
 
 .. code-block:: python
 
@@ -120,6 +121,8 @@ astroNN Apogee DR14 Stellar Parameters and Abundances
     # Ti2/H, V/H, Cr/H, Mn/H, Fe/H, Co/H, Ni/H]
     nn_prediction = f['astroNN']  # neural network prediction, contains -9999.
     nn_uncertainty = f['astroNN_error']  # neural network uncertainty, contains -9999.
+
+.. _`astroNN_apogee_dr14_catalog.fits`: https://github.com/henrysky/astroNN_spectra_paper_figures/raw/master/astroNN_apogee_dr14_catalog.fits
 
 Using Neural Net on arbitrary APOGEE spectra
 -----------------------------------------------
