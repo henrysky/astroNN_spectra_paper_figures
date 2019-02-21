@@ -63,6 +63,8 @@ Jupyter Notebook
     | It describes how to compile dataset with ASPCAP normalized spectra (as opposed to continuum normalization), training and testing NN on that.
 -   | `Small_Data.ipynb`_
     | It describes training neural network with smaller datasets and see the performance.
+-   | `nn_figure6_draw_io`_
+    | Source for Figure 6 in paper for the NN model, can be opened and edited by draw.io
 
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Training.ipynb: Training.ipynb
@@ -73,6 +75,7 @@ Jupyter Notebook
 .. _Apogee_dr14_NN_Catalog.ipynb: Apogee_dr14_NN_Catalog.ipynb
 .. _ASPCAP_Normalization.ipynb: ASPCAP_Normalization.ipynb
 .. _Small_Data.ipynb: Small_Data.ipynb
+.. _nn_figure6_draw_io: https://github.com/henrysky/astroNN_spectra_paper_figures/raw/master/_nn_figure6_draw_io
 
 Neural Net Models
 ------------------
