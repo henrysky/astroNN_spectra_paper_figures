@@ -24,7 +24,7 @@ Getting Started
 This repository is to make sure all figures and results are reproducible by anyone easily for this paper [`arXiv:1804.08622`_][`ADS`_].
 
 .. _arXiv:1804.08622: https://arxiv.org/abs/1808.04428
-.. _ADS: https://ui.adsabs.harvard.edu/#abs/2018arXiv180804428L/
+.. _ADS: https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.3255L/abstract
 
 If Github has issue (or too slow) to load the Jupyter Notebooks, you can go
 http://nbviewer.jupyter.org/github/henrysky/astroNN_spectra_paper_figures/tree/master/
