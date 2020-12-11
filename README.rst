@@ -193,7 +193,7 @@ Authors
 =================
 -  | **Henry Leung** - henrysky_
    | Student, Department of Astronomy and Astrophysics, University of Toronto
-   | Contact Henry: henrysky.leung [at] mail.utoronto.ca
+   | Contact Henry: henrysky.leung [at] utoronto.ca
 
 -  | **Jo Bovy** - jobovy_
    | Professor, Department of Astronomy and Astrophysics, University of Toronto
