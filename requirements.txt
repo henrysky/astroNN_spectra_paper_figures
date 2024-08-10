@@ -9,5 +9,5 @@ scipy~=1.5
 ipykernel
 ipython~=7.16
 astropy~=4.1
-keras==2.0.8
+keras==2.13.1
 astroNN==1.0.1
