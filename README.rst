@@ -18,6 +18,9 @@ entire APOGEE DR14 dataset. Simultaneously, we release ``astroNN``, a well-teste
 developed for this work, but that is also designed to be a general package for deep learning in astronomy. ``astroNN`` is
 available at https://github.com/henrysky/astroNN with extensive documentation at http://astroNN.readthedocs.io.
 
+.. contents:: **Table of Contents**
+    :depth: 3
+
 Getting Started
 =================
 
@@ -41,10 +44,40 @@ Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 
 To continuum normalize arbitrary APOGEE spectrum with v1.0.0, see: https://astronn.readthedocs.io/en/v1.0.0/tools_apogee.html#continuum-normalization-of-apogee-spectra
 
+Docker Image
+----------------
+
+If you have `Docker`_ installed, you can use the `Dockerfile`_ to build a Docker image upon Tensorflow container from `NVIDIA NGC Catalog`_ with all dependencies installed and data files downloaded.
+
+.. _NVIDIA NGC Catalog: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow
+.. _Dockerfile: Dockerfile
+.. _Docker: https://www.docker.com/
+
+To build the Docker image called ``astronn_spectra_paper_figures``, run the following command in the root directory of this repository:
+
+.. code-block:: bash
+
+    docker build -t astronn_spectra_paper_figures .
+
+To run the Docker container with all GPU available to the container named ``testing123``, run the following command:
+
+.. code-block:: bash
+    
+    docker run --gpus all --name testing123 -it -e SHELL=/bin/bash --entrypoint bash astronn_spectra_paper_figures
+
+Then you can attach to the container by running:
+
+.. code-block:: bash
+
+    docker exec -it testing123 bash
+
+Now you can run all notebooks or training script inside the container
+
 Jupyter Notebook
 ------------------
 -   | `Datasets_Data_Reduction.ipynb`_
     | You should check out this notebook first as it describes how to reproduce the **exactly** same datasets used in the paper
+    | You can also download the pre-compiled dataset used in this paper on `Zenodo`_ and place the files under the root directory of this repository.
 -   | `Training.ipynb`_
     | It provided the code used to train ``astroNN_0606_run001``  and ``astroNN_0617_run001``
 -   | `Inference_highSNR.ipynb`_
@@ -66,6 +99,7 @@ Jupyter Notebook
 -   | `nn_figure6_draw_io`_
     | Source for Figure 6 in paper for the NN model, can be opened and edited by draw.io
 
+.. _Zenodo: https://zenodo.org/records/13290056
 .. _Datasets_Data_Reduction.ipynb: Datasets_Data_Reduction.ipynb
 .. _Training.ipynb: Training.ipynb
 .. _Inference_highSNR.ipynb: Inference_highSNR.ipynb
@@ -192,11 +226,11 @@ To load it with python
 Authors
 =================
 -  | **Henry Leung** - henrysky_
-   | Student, Department of Astronomy and Astrophysics, University of Toronto
+   | Department of Astronomy and Astrophysics, University of Toronto
    | Contact Henry: henrysky.leung [at] utoronto.ca
 
 -  | **Jo Bovy** - jobovy_
-   | Professor, Department of Astronomy and Astrophysics, University of Toronto
+   | Department of Astronomy and Astrophysics, University of Toronto
 
 .. _henrysky: https://github.com/henrysky
 .. _jobovy: https://github.com/jobovy
