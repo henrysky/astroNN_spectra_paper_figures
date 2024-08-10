@@ -18,6 +18,9 @@ entire APOGEE DR14 dataset. Simultaneously, we release ``astroNN``, a well-teste
 developed for this work, but that is also designed to be a general package for deep learning in astronomy. ``astroNN`` is
 available at https://github.com/henrysky/astroNN with extensive documentation at http://astroNN.readthedocs.io.
 
+.. contents:: **Table of Contents**
+    :depth: 3
+
 Getting Started
 =================
 
@@ -40,6 +43,35 @@ Some notebooks make use of my `milkyway_plot`_ to plot on milkyway.
 .. _milkyway_plot: https://github.com/henrysky/milkyway_plot
 
 To continuum normalize arbitrary APOGEE spectrum with v1.0.0, see: https://astronn.readthedocs.io/en/v1.0.0/tools_apogee.html#continuum-normalization-of-apogee-spectra
+
+Docker Image
+----------------
+
+If you have `Docker`_ installed, you can use the `Dockerfile`_ to build a Docker image upon Pytorch container from `NVIDIA NGC Catalog`_ with all dependencies installed and data files downloaded.
+
+.. _NVIDIA NGC Catalog: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch
+.. _Dockerfile: Dockerfile
+.. _Docker: https://www.docker.com/
+
+To build the Docker image called ``astronn_spectra_paper_figures``, run the following command in the root directory of this repository:
+
+.. code-block:: bash
+
+    docker build -t astronn_spectra_paper_figures .
+
+To run the Docker container with all GPU available to the container named ``testing123``, run the following command:
+
+.. code-block:: bash
+    
+    docker run --gpus all --name testing123 -it -e SHELL=/bin/bash --entrypoint bash astronn_spectra_paper_figures
+
+Then you can attach to the container by running:
+
+.. code-block:: bash
+
+    docker exec -it testing123 bash
+
+Now you can run all notebooks or training script inside the container
 
 Jupyter Notebook
 ------------------
@@ -192,11 +224,11 @@ To load it with python
 Authors
 =================
 -  | **Henry Leung** - henrysky_
-   | Student, Department of Astronomy and Astrophysics, University of Toronto
+   | Department of Astronomy and Astrophysics, University of Toronto
    | Contact Henry: henrysky.leung [at] utoronto.ca
 
 -  | **Jo Bovy** - jobovy_
-   | Professor, Department of Astronomy and Astrophysics, University of Toronto
+   | Department of Astronomy and Astrophysics, University of Toronto
 
 .. _henrysky: https://github.com/henrysky
 .. _jobovy: https://github.com/jobovy
